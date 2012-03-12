@@ -1,0 +1,29 @@
+jquery.sortby.js
+
+@author: Justin Evans
+
+Extends jQuery by adding sort functionality to arrays of objects.
+-------------------------------------------------------------------
+
+Usage:
+
+// Given Data
+
+var dataArray = [ 
+	{ firstName : 'John', lastName : 'Smith' },
+	{ firstName : 'Justin', lastName : 'Evans' }
+];
+
+// Pass a function into "sortBy" to return a sorted object
+
+var sortedArray = $(dataArray).sortBy(function(name){
+     return name.lastName;
+};
+  
+// Results of 'sortedArray'
+[
+
+ 	{ firstName : 'Justin', lastName: 'Evans' },
+	{ firstName : 'John', lastName : 'Smith' }
+]
+
